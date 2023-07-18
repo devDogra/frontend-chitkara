@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>My &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forms</h1>
+    <p> The &lt;br&gt; tag stands for line breaks </p>
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <div>
+                <label>
+                    NAME: 
+                    <input required name="username" type="text" placeholder="Type name here..."> <br>
+                </label>
+            </div>
+    
+            <div>
+                <label for="name-input">AGE: </label>
+                <input max="100" min="13" name="age" id="name-input" type="number" placeholder="Type age here..."> <br>
+            </div>
+
+            <div>
+                <label>
+                    Email: 
+                    <input type="email" placeholder="Enter email">
+                </label>
+            </div>
+
+            <div>
+                Gender
+                <br>
+                <label>
+                    Male:
+                    <input name="gender" type="radio">
+                </label>
+        
+                <label>
+                    Female: 
+                    <input name="gender" type="radio">
+                </label>
+        
+                <label>
+                    Other: 
+                    <input name="gender" type="radio">
+                </label>
+            </div>
+           
+        </fieldset>
+       
+       
+        <input type="date"> <br> 
+        <input type="range"> <br>
+        <input type="file"> <br>
+        <br><br>
+
+
+
+        <br><br>
+
+        <div>
+            <label>
+                Gift wrapping: 
+                <input type="checkbox">
+            </label>
+        </div>
+        
+        <textarea maxlength="50" rows="10" cols="30" placeholder="Enter feedback here"></textarea>
+        <br>
+
+        <select>
+            <option>Red</option>
+            <option>Green</option>
+            <option>Blue</option>
+            <option>Pink</option>
+            <option>Purple</option>
+        </select>
+        <br>
+        <br>
+
+        <button type="reset">Clear form</button>
+        <button type="submit">Submit form </button>
+
+        FORM VALIDATION 
+    </form>
+</body>
+</html>
