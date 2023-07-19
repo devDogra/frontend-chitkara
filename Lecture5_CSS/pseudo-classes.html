@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psuedo-classes</title>
+    <style>
+        /* Target a certain state */
+        button {
+            background-color: transparent;
+            border: 1px solid brown;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: rgba(255, 255, 0, 0.403);
+            cursor: pointer
+        }
+
+        button:active {
+            background-color: red;
+        }
+
+        button:focus {
+            border: 5px solid pink; 
+        }
+    </style>
+</head>
+<body>
+    <button>I AM A BUTTON</button>
+    <button>I AM A BUTTON</button>
+    <button>I AM A BUTTON</button>
+    <button>I AM A BUTTON</button>
+</body>
+</html>

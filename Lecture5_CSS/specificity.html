@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+
+    <style>
+        /* SPECIFICITY */
+        /* #parent-id p {
+            background-color: aqua;
+        } */
+
+        /* tag => 1 */
+        /* class => 10 */
+        /* id => 100 */
+        
+        /* 101 */
+        #parent-id p {
+            background-color: pink;
+        }
+
+        /* 12 */
+        .parent-class > div > p {
+            background-color: blue;
+        }
+
+        /* 11 */
+        .parent-class p {
+            background-color: red;
+        }
+
+        /* 1 */
+
+        /* Infinity */
+        p {
+            background-color: orange !important;
+        }
+        /* Infinity */
+        p {
+            background-color: red !important;
+        }
+
+        /* p {
+            background-color: blue;
+        }
+        p {
+            background-color: green;
+        } */
+
+
+    </style>
+</head>
+<body>
+
+    <div id="parent-id" class="parent-class">
+        <div id="child-id">
+            <p style="background-color: grey;">This is a para</p>
+        </div>
+    </div>
+
+</body>
+</html>
