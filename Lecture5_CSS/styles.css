@@ -1,0 +1,50 @@
+p {
+    background-color: lightgreen;
+}
+
+p {
+    background-color: lightcoral;
+    color: blue; 
+}
+
+#verification {
+    font-weight: bold; 
+    background-color: orange;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.underline.big {
+    border: 2px solid black; 
+}
+
+.big {
+    font-size: 30px; 
+}
+
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    background-color: cyan;
+}
+
+section {
+    text-decoration:line-through; 
+    border: 5px solid purple; 
+}
+
+
+
+/* 
+
+h2 {
+    text-transform: uppercase;
+    background-color: cyan;
+}
+
+h3 {
+    text-transform: uppercase;
+    background-color: cyan;
+} */

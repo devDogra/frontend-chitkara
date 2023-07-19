@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <style>
+        /* Next Adjacent siblings */
+        li + li {
+            background-color: aqua;
+        }
+
+        main ~ p {
+            background-color: brown;
+        }
+
+        ol ~ p {
+            font-size: 40px; 
+        }
+
+
+       main p {
+            border: 4px dotted violet; 
+       }
+
+       main > p {
+            border: 4px dotted blue; 
+       }
+
+
+    </style>
+</head>
+<body>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>jQuery</li>
+        <li>React</li>
+        <li>Angular</li>
+    </ol>
+
+    <main>
+        This is a div
+        <div>
+            This is a child div
+            <p>This para is inside a child div</p>
+            <p>This para 2 is inside a child div</p>
+        </div>
+
+        <p>This para is inside main</p>
+
+    </main>
+    <p> Para 1</p>
+    <p> Para 2</p>
+
+   
+</body>
+</html>
