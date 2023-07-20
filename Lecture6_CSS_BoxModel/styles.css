@@ -1,0 +1,50 @@
+* {
+    margin: 0; 
+    padding: 0; 
+}
+
+.box {
+    background-color: gold;
+    border: 5px solid brown;
+    padding: 10px;  
+    margin: 10px;
+
+    width: 150px; 
+
+    text-align: center;
+
+    /* margin: auto;  */
+    /* margin-top: auto;  */
+    /* margin-left: auto;  */
+    /* margin-right: auto;  */
+
+    /* margin: TOP&BOTTOM LEFT&RIGHT */
+    margin: 30px auto; 
+}
+
+.box2 {
+    background-color: pink;
+    border: 5px solid purple; 
+    padding: 10px; 
+    width: 50px; 
+
+    text-align: center;
+
+
+    margin-left: auto; 
+    margin-right: auto; 
+
+    border-radius: 400px; 
+}
+
+.container {
+    border: 7px solid black;
+    width: 150px;
+    /* margin: 10px auto;   */
+
+    padding: 5px; 
+}
+
+
+
+
