@@ -7,16 +7,11 @@
     background-color: gold;
     border: 5px solid brown;
     padding: 10px;  
-    margin: 10px;
+    margin: 30px;
 
     width: 150px; 
 
     text-align: center;
-
-    /* margin: auto;  */
-    /* margin-top: auto;  */
-    /* margin-left: auto;  */
-    /* margin-right: auto;  */
 
     /* margin: TOP&BOTTOM LEFT&RIGHT */
     margin: 30px auto; 
