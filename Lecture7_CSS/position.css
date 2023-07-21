@@ -4,11 +4,15 @@ h1 {
 
 div {
     padding: 10px; 
+    text-align: center;
 }
+/* top, bottom, left, right, z-index */
 .a {
     border: 1px solid black; 
     background-color: rgba(0, 0, 255, 1);
 
+    position: relative; 
+    z-index: -1; 
   
 }
 .b {
@@ -18,14 +22,50 @@ div {
     width: 150px; 
 
     position: relative; 
-    /* bottom: 15px;   */
-    left: 30px; 
+    bottom: 15px;  
+    left: 40px; 
     /* right: */
     /* top:  */
 
-    z-index: 0;
+    z-index: -1;
 }
 .c {
     border: 1px solid black; 
     background-color: rgba(0, 128, 0, 0.445);
+}
+.d {
+    border: 1px solid black; 
+    background-color: rgba(20, 12, 254, 0.445);
+
+    width: 100px; 
+    /* width: 100%;  */
+    position: absolute;
+
+
+    top: 0px;
+
+    /* left: calc(50% - 100px);  */
+
+    /* Will not work  */
+    /* left: auto;  */
+    /* right: auto;  */
+
+
+}
+.e {
+    border: 1px solid black; 
+    background-color: rgba(234, 255, 0, 0.533);
+}
+
+.fixed {
+    border: 1px solid black; 
+    background-color: rgba(255, 0, 217, 0.533);
+    
+}
+
+
+.parent-d {
+    border: 4px solid black;
+
+    position: relative; 
 }

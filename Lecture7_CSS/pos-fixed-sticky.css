@@ -1,0 +1,32 @@
+div {
+    padding: 10px; 
+    text-align: center;
+    border: 1px solid black; 
+}
+.fixed {
+    background-color: rgba(255, 0, 217, 0.533);
+    
+    position: fixed; 
+    /* position: absolute;  */
+    height: 30px; 
+    top: 80%; 
+    left: 80%; 
+
+    border-radius: 200px;
+}
+.parent-fixed {
+    background-color: gold;
+
+    /* Won't work with pos: fixed */
+    /* position: relative;  */
+}
+
+.sticky-parent {
+    background-color: cyan;
+}
+.sticky {
+    background-color: blueviolet;
+
+    position: sticky;
+    top: 0px; 
+}
