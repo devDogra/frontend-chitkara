@@ -20,12 +20,21 @@
     /* Spacing between the lines */
     align-content: space-between; 
 
-    height: 400px; 
+    /* height: 400px;  */
 }
+
+/* main vs cross axis, switch */
+/* justify-content (main), align-items (cross) */
+/* flex-wrap */
+/* flex-grow (0, 1, 2, N), shrink */
+/* align-self */
+/* flex-flow: flex-direction flex-wrap */
 
 .item {
     background-color: aqua;
     border: 2px solid black; 
+    /* width: 200px;  */
+
 }
 
 /* Items can have flex properties too */
@@ -42,20 +51,30 @@
 /* two => 3/5 : 60% of lost space will be from two */
 .one {
     min-height: 50px; 
-    flex-grow: 5; 
-    flex-shrink: 1; 
+    
+    /* width: 300px;  */
+    /* sets width when flex-direction */
+    /* is row */
+    flex-basis: 300px; 
+    /* flex-grow: 5; 
+    flex-shrink: 1;  */
+
+    /* flex: flex-grow flex-shrink flex-basis */
+    
 }
 .two {
     min-height: 100px; 
     align-self: start; 
-    flex-grow: 0; 
-    flex-shrink: 3; 
+    /* flex-grow: 0; 
+    flex-shrink: 3;  */
+
+
     
 }
 .three {
     min-height: 150px; 
-    flex-grow: 1; 
-    flex-shrink: 1; 
+    /* flex-grow: 1; 
+    flex-shrink: 1;  */
 
 
 

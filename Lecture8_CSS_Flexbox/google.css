@@ -1,0 +1,52 @@
+* {
+    margin: 0; 
+    padding: 0; 
+}
+
+body, header, footer, main {
+    border: 1px solid black; 
+}
+body {
+    /* padding: 5px;  */
+    height: 100vh; 
+    border: 2px solid red; 
+
+    display: flex; 
+    flex-direction: column;
+
+    /* vh, vw viewport height, width */
+}
+
+.center {
+    border: 2px solid black; 
+    width: 70vw; 
+    background-color: pink;
+
+    text-align: center;
+}
+
+.searchbar {
+    display: flex; 
+}
+
+.searchbar > input {
+    flex-grow: 1; 
+}
+
+header {
+    background-color: green;
+    height: 60px; 
+}
+main {
+    background-color: orange;
+    flex-grow: 1; 
+
+    display: flex; 
+
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    background-color: lightblue;
+    height: 60px; 
+}
