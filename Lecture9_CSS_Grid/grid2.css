@@ -15,7 +15,7 @@
     grid-gap: 5px; 
 
     height: 700px; 
-    
+
     justify-items: start;
     align-items: center;  
 
@@ -39,3 +39,7 @@
 
 .three {
 }
+
+flex => align-items (vertical within the row)
+flex => justify-content (horizontal within the row)
+ROW (main axis)
