@@ -1,0 +1,39 @@
+.container, .item { font-size: 25px; padding: 4px; border: 2px solid black; }
+
+
+
+.container {
+    background-color: lightpink;
+    display: grid; 
+
+    /* Overflow */
+    /* grid-template-columns: repeat(4, 100px); */
+
+    /* Set min col width = 60px, max col width = 100px */
+    /* grid-template-columns: repeat(4, minmax(60px, 100px)); */
+
+    /* Give me as many 100px columns as you can */
+    /* ******** */
+    /* grid-template-columns: repeat(auto-fit, 100px); */
+
+    /* Give me as many 60px..100px columns as you can */
+    /* Each column will try to get the maximum width it can */
+    /* grid-template-columns: repeat(auto-fit, minmax(60px, 100px)); */
+
+    /* repeat(auto-fit, 100px) */
+    /* grid-template-columns: repeat(4, minmax(120px, 1fr)); */
+
+    /* Dont think about it - use it */
+
+
+    /* Give me as many columns as you can, with min. width 120px, and handle the free space */
+    /* ************ */
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+
+
+    /* grid-template-columns: repeat(auto-fit, minmax(120px, 140px)); */
+}
+
+.item { 
+    background-color: lightgreen; 
+}
