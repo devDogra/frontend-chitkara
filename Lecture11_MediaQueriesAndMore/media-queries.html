@@ -6,6 +6,11 @@
     <title>Media Queries</title>
     <link rel="stylesheet" href="media-queries.css">
 <style>
+    html {
+        /* Root's font size. Default = 16px */
+        font-size: 20px; 
+    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
     /* * { border: solid; } */
     nav {
@@ -18,6 +23,45 @@
     .title {
         font-weight: bold; 
     }
+    .links > a {
+        margin: 0 2px; 
+    }
+
+    .hamburger {
+        padding: 0 4px; 
+        font-weight: bold;
+        display: none; 
+    }
+    /* Media Queries */
+    /* 0....500 OK  */
+    @media (max-width: 500px) {
+        .title {
+            display: none; 
+        }
+    }
+
+    @media (max-width: 300px) {
+        .links {
+            display: none; 
+        }
+        .order {
+            display: none; 
+        }
+        .hamburger {
+            /* none => block */
+            display: block;
+        }
+
+    }
+
+    p {
+        margin: 0 auto; 
+        /* max-width: 66ch;  */
+
+        /* font-size: calc(1rem + 3vw);  */
+        font-size: clamp(10px, 1rem +3vw, 40px); 
+    }
+
 </style>
 </head>
 <body>
@@ -33,8 +77,15 @@
             <a href="">About Us</a>
             <a href="">Outlets</a>
         </span>
-
-        <button>Order</button>
+        <!-- Unicode -->
+        <button class="order">Order</button>
+        <button class="hamburger">☰</button>
     </nav>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis assumenda quasi quidem tempore ipsam quam modi, id cumque corrupti quod beatae, debitis earum molestias vel rerum excepturi! Amet excepturi accusamus ab quisquam! Repellendus, placeat incidunt cum explicabo quidem fuga sequi distinctio aliquid aliquam et laudantium deleniti dignissimos nesciunt veritatis veniam nulla minima. Adipisci inventore deserunt obcaecati itaque debitis, ratione voluptate nulla aperiam eaque beatae atque velit corrupti blanditiis. Pariatur quidem et consequuntur a molestiae suscipit cumque, ab aut dignissimos nesciunt ipsa ad laudantium in soluta dolorum eaque assumenda quaerat hic qui fuga delectus. Dolorem aspernatur fugit culpa atque assumenda quis.
+   
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum laborum unde consectetur veritatis architecto quaerat debitis tempore quia in at quod nesciunt, recusandae id similique, soluta, est minima aut. Adipisci fugit facilis nihil, necessitatibus ex, velit beatae modi explicabo praesentium magni, repellendus accusamus accusantium sunt laborum expedita architecto! Impedit unde aliquam deserunt excepturi quidem velit, voluptatem corrupti, qui ullam saepe cupiditate vitae hic suscipit? Maiores sed quas accusantium neque officia itaque ratione soluta, possimus architecto. Nam quam nisi laudantium ipsa repellendus quisquam recusandae, excepturi placeat, dignissimos commodi laborum culpa, corporis rerum vitae! Provident neque enim, iure repellendus eaque autem omnis.
+    </p>
 </body>
 </html>
