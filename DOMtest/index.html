@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div { padding: 10px; border: 3px solid black; margin: 5px; }
+        div {  background-color: coral; }
+        div > div { background-color: crimson; }
+        div > div > div { background-color: red; }
+        div > div > div > div { background-color: darkred; }
+        .blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="grandparent">
+        Grandparent
+        <div class="parent">
+            Parent
+            <div class="child">
+                Child
+            </div>
+            <div class="child">
+                Child
+            </div>
+            <div class="child">
+                Child
+            </div>
+        </div>
+    </div>
+    <script>
+        const grandparent = document.querySelector("#grandparent"); 
+        const parent = document.querySelector(".parent"); 
+        const child = document.querySelector(".child"); 
+
+        console.log(grandparent); 
+        console.log(parent);
+
+        // Only selecting one, if wanna select all?
+        console.log(child);
+
+        const children = document.querySelectorAll(".child"); 
+        console.log(children); 
+
+        children[0].textContent = "Child 1";
+        children[1].textContent = "Child 2";
+        children[2].textContent = "Child 3";
+        
+        children[1].remove()
+
+        let newChild = document.createElement("div"); 
+        newChild.textContent = "Child 4";  
+        parent.appendChild(newChild); 
+
+
+        newChild.classList.add("blue"); 
+        newChild.classList.remove("blue"); 
+
+        
+    </script>
+</body>
+</html>
