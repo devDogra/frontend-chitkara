@@ -8,12 +8,26 @@
         ul { padding: 10px; border: solid; }
         li { padding: 5px; border: solid; }
         body { margin-left: 50px; }
+        .edit-box { 
+            border: solid; 
+            display: none; 
+        }
+        .edit-box.show {
+            display: block; 
+        }
     </style>
 </head>
 <body>
     <h1> Todo List </h1>
     <input>
     <button class="add">Add Todo</button>
+
+    <div class="edit-box">
+        <h3>Edit Task</h3>
+        <input class="edit-inp">
+        <button class="edit-ok">OK</button>
+    </div>
+
     <ul>
         <li>
             <p>Go to the gym</p>
@@ -23,6 +37,10 @@
         <li>Study</li>
 
     </ul>
+
+ 
+
+
     <script src="script.js"></script>
 </body>
 </html>
