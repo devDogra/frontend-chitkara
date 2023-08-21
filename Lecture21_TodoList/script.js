@@ -49,6 +49,8 @@ function editTodo(event) {
     } else {
         // Show edit box
         editBox.classList.add("show"); 
+
+        clicked.parentElement.classList.add("editing"); 
     }
 }
 
@@ -56,6 +58,10 @@ function applyEdit(event) {
     const editValue = editInput.value; 
     console.log(editValue); 
     editBox.classList.remove("show");
+
+    const editingLi = document.querySelector(".editing"); 
+    editingLi.textContent = editValue; 
+    editingLi.classList.remove("editing"); 
 
 }
 
