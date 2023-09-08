@@ -4,20 +4,22 @@ function cat() {
 
     function walk() {
         const activity = "Walking...";
-        hunger++;
+        hunger++; 
         console.log(activity, hunger); 
     }
     function eat() {
         const activity = "Eating..."; 
         hunger--; 
-        console.log(activity, hunger);
+        console.log(activity, hunger); 
     }
-
+    
     return { walk, eat }; 
 }
 
 const { walk, eat } = cat();
+// const { walk, eat } = catFunctions;
 
 walk();
 walk();
 eat();
+

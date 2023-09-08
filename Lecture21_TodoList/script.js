@@ -5,6 +5,8 @@ const editBox = document.querySelector(".edit-box");
 const editOk = document.querySelector(".edit-ok"); 
 const editInput = document.querySelector(".edit-inp")
 
+let id = 0; 
+
 function addTodo() {
     const todoName = input.value; 
 
@@ -27,6 +29,12 @@ function addTodo() {
     newLi.appendChild(newLi_edit); 
     list.appendChild(newLi)
     input.value = ""; 
+
+    // localStorage.setItem('Task' + id, todoName)
+    localStorage.setItem(Date.now(), todoName)
+    id++; 
+
+
 }
 
 
@@ -50,18 +58,20 @@ function editTodo(event) {
         // Show edit box
         editBox.classList.add("show"); 
 
-        clicked.parentElement.classList.add("editing"); 
+        const li = clicked.parentElement;
+        li.classList.add("currently-editing");
     }
 }
 
 function applyEdit(event) {
     const editValue = editInput.value; 
     console.log(editValue); 
+    const currentlyEditingLi = document.querySelector(".currently-editing");
+
+    currentlyEditingLi.firstChild.textContent = editValue;
+    
     editBox.classList.remove("show");
 
-    const editingLi = document.querySelector(".editing"); 
-    editingLi.textContent = editValue; 
-    editingLi.classList.remove("editing"); 
 
 }
 
