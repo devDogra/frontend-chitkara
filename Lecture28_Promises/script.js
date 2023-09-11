@@ -23,4 +23,22 @@ getLocn
     })
     .then(currPos => {
         console.log(currPos);
+        return getLocn;
     })
+    .then(currPos => {
+        console.log(currPos);
+        return getLocn;
+    })
+    .catch(errorMsg => {
+        console.log(errorMsg);
+    })
+
+navigator.geolocation.getCurrentPosition(pos => {
+    console.log(pos); 
+    navigator.geolocation.getCurrentPosition(pos => {
+        console.log(pos);
+        navigator.geolocation.getCurrentPosition(pos => {
+            console.log(pos); 
+        })
+    })
+})
