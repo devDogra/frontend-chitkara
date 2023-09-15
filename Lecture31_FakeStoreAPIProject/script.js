@@ -11,7 +11,7 @@ function getItemHTML(name, img, price) {
 
     let itemHTML = `
         <div class="item">
-            <h3>${name}</h3>
+            <h3 class="name">${name}</h3>
             <img src=${img} alt="">
             <p class="price"> Price => ${price}</p>
         </div>
