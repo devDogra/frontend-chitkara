@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .product {
+        /* border: 2px solid black;  */
+        text-align: center; 
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px 2px;
+        padding: 15px; 
+    }
+    #container {
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px; 
+    }
+    body {
+        background-color: tomato;
+    }
+</style>
+</head>
+<body>
+    <h1>Fake Store</h1>
+
+    <div id="container">
+        <div class="product">
+            <h3>Bag</h3>
+            <img width="100px" src="https://media.wired.com/photos/6495f3af2cc57777ec67f0ed/16:9/w_2400,h_1350,c_limit/bellroy-tokyo-work-bag-source-bellroy-Gear.jpg">
+            <p>Price => 490</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>    
+</body>
+</html>
