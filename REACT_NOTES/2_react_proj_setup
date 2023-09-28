@@ -1,0 +1,146 @@
+-----------------------------------------------------------------
+	PROJECT SETUP
+------------------------------------------------------------------
+
+Vite => Tool we can use to set up a react project for us
+Can do on our own but this makes it easier
+
+npm install vite -g		//install vite globally on our system
+npm create vite@latest		//create a new project using the latest version of vite
+
+cd <projname>		
+npm install 			//install dependencies
+npm run dev                	//run the proj
+
+----------------------------------------------------------------
+	 PROJECT ANATOMY/STRUCTURE
+----------------------------------------------------------------
+.gitignore			Files/folders ignored by git
+
+eslint				eslint (program that checks 
+				code style) config
+
+package.json			For dependencies (packages
+				that our project uses/
+				"depends" on. react, react
+				DOM will be dependencies
+				
+
+				Dependencies are installed in
+				the 'node_modules' folder				
+
+				Also stores scripts 
+				Just "vite" also runs 
+				the app, but inside 
+				package.json scripts, 
+				we have created an 
+				alias (2nd name) for 
+				the "vite" command 
+				which is "dev"
+				To run any script/cmd
+				by its alias we have to do
+				npm run <scriptname>			
+
+-------------------------------------------------------------------------------------------------------
+NOTE:
+node_modules/ is in .gitignore
+Why?
+Because when we push our project to GitHub, we don't want all the dependencies (packages) to be pushed
+along with our own code, because that would make the total size very large
+
+So, we store the names of all the packages our project is using in package.json, and push our project
+without node_modules
+
+Then when someone wants to download our project, he/she can get it from GitHub, and then run the command
+'npm install' without any arguments, and all the packages listed in packages.json will automatically
+be installed
+
+This way we wont have to commit all the packages we're using every time
+
+------------------------------------------------------------------------------------------------------	
+				
+package-lock.json		Storing exact versions of
+				dependencies
+
+index.html			The HTML file that will be
+				delivered to the user
+				Contains a div with id=root
+				This div is where the React
+				application will be put
+				in (mounted). All the
+				elements react creates
+				will go inside this div
+
+public				Folder containing things
+				that go directly into
+				index.html (like favicons)
+
+
+src				Folder containing all our react code
+
+src/assets			Folder with all images etc. 
+				that will be used by our React app
+
+src/main.jsx			Our main JS file that will be loaded into index.html
+				When using react, your JS files can end with .js or .jsx, 
+				but with Vite you have to use .jsx to tell 
+				Vite that you're using React
+
+				main.jsx imports React, tells React what the root div is, 
+				and then imports the whole application
+				and then mounts it (puts it inside) the root div
+					
+src/App.jsx			Contains our actual application code. 
+				main.jsx imports the react application from this file.
+
+Note how the "import" statements only specifiy the name of the dependency, not the path (eg ./node_modules/react/...)
+We only have to specificy the name, and the path is resolved on its own by Vite
+								
+
+If you run 'npm run dev', then check the console tab, you will see that all the elements on the page have been put inside 
+the root div by React
+
+We can delete all the unnecessary code/files, and be left with a starter application that only shows a
+	 <h1> Hello World </h1>
+
+-------------------------------------------------------------------------
+			REACT INTRODUCTION
+------------------------------------------------------------------------ 
+Every UI is built using components
+Components are reusable building blocks of the UI. They have their own structure, style and behaviour
+An example of a component is a navbar
+
+Its structure includes all the logos and the links inside it, 
+style includes how it looks (eg borders, colors, how it looks on diff screen sizes),
+ and behaviour includes that on smaller screens, clicking the hamburger icon opens a menu
+with all the links
+
+Examples of stackoverflow divided into components: 
+https://gcdnb.pbrd.co/images/dvQn7yA8ftW1.png?o=1
+
+Components can have other components inside them
+
+In React we build our own components, which are like our own custom web page elements
+
+
+The main component is the App component, which represents our entire application. 
+All other components go inside this component. 
+
+------------------------------------------
+	COMPONENTS  
+-------------------------------------------
+In react we make our own components with structure, styling and behaviour
+
+Components are just normal functions, that return their structure.
+How?
+We return the HTML for our component from the function. 
+
+For eg: return (<h1> Hello World </h1>)
+
+____________________________________________________________________________________________________
+But how can we write HTML in JS?
+ANS: THis is not HTML, this is JSX. It looks like HTML but isn't. JSX is converted into JS in the end. 
+Just provides a cleaner way of describing the structure of a component
+___________________________________________________________________________________________
+
+TO be continued. 
