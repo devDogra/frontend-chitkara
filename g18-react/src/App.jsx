@@ -7,7 +7,6 @@ function App() {
     <>
       <header>
         <h1>Todo List</h1>
-        <span> {100 + 200} </span>
       </header>
 
       <ul>
