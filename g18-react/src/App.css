@@ -3,6 +3,6 @@
   border: 2px solid black; 
 }
 
-.task.green {
+.task.done  {
   background-color: green;
 }
