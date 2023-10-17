@@ -1,8 +1,24 @@
+import { useEffect, useState } from "react";
 import "./App.css"
 import Task from "./Task";
 
 function App() {
-  const myName = "Dev"; 
+  const [tasks, setTasks] = useState([])
+
+  useEffect(() => {
+    console.log("Initial render");
+
+    fetch("https://dummyjson.com/todos")
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(data.todos); 
+        setTasks(data.todos);
+      })
+    
+  }, [])
+ 
   return (
     <>
       <header>
@@ -10,18 +26,14 @@ function App() {
       </header>
 
       <ul>
-        <Task 
-          taskname="Study" 
-          desc="Study at 8PM"
-          importance={10+10}
-        >
-        </Task>
-
-        <Task 
-          taskname="Sleep" 
-          desc="Sleep at 9PM"
-        >
-        </Task>
+          {
+            tasks.map((item) => {
+              return <Task 
+                  taskName={item.todo}
+                  key={item.id}
+                ></Task>
+            })
+          }
       </ul>
     </>
   );
