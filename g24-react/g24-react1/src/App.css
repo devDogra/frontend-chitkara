@@ -2,3 +2,12 @@
   background-color: pink; 
   border: 2px solid black; 
 }
+
+.important {
+  background-color: red; 
+  color: white; 
+}
+
+.done {
+  text-decoration: line-through;
+}
