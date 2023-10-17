@@ -1,24 +1,35 @@
+import { useRef, useState } from 'react'
+
 function Task(props) {
+    // let taskdone = false;
+    let [taskdone, setTaskdone] = useState(false);
+    const taskRef = useRef(null)
 
- 
     function handleChange(event) {
-      console.log("Changed"); 
       const checked = event.target.checked;
-      console.log(checked); 
-      const li = event.target.parentElement; 
+      // taskdone = checked; 
+      setTaskdone(checked);
+    }
+    function handleDelete(event) {
+      const li = taskRef.current
+      li.remove();
+    }
 
-      if (checked) {
-        li.classList.add("done"); 
-      } else {
-        li.classList.remove("done"); 
-      }
+    function getClasses() {
+      let classes = [ "task" ];
+      if (props.important) classes.push("important");
+      if (taskdone) classes.push("done");
+      // ["task", "important", "done"];
+      // "task important done"
+      return classes.join(" ");
 
     }
 
     return (
-      <li className={ props.important ? "task important" : "task"}>
+      <li ref={taskRef} className={getClasses()}>
         <h2>{ props.taskName }</h2>
         <input type="checkbox" onChange={handleChange}></input>
+        <button onClick={handleDelete}>DELETE</button>
       </li>
     );
 }
