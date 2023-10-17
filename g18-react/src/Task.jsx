@@ -17,7 +17,7 @@ function Task(props) {
         <h3> { props.taskname } </h3>
         <p> { props.desc } </p>
         <p> IMPORTANCE - { props.importance } </p>
-        <input type="checkbox" onChange={handleCheck()}></input>
+        <input type="checkbox" onChange={handleCheck}></input>
       </li>
     );
 }
