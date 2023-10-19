@@ -1,12 +1,23 @@
 import "./App.css"
 import Task from "./Task";
+import { useEffect, useState } from 'react';
 
 function App() {
-  const tasks = [
-    { taskName: "Study", important: true, id: 100 },
-    { taskName: "Shopping", important: false, id: 101 },
-    { taskName: "Work out", important: true, id: 102 },
-  ]
+  const [ tasks, setTasks ] = useState([])
+
+  useEffect(() => {
+    fetch("https://dummyjson.com/todos")
+      .then(response => {
+        console.log(response);
+        return response.json();
+      })
+      .then(data => {
+        console.log(data.todos); 
+        setTasks(data.todos);
+      })
+  }, [])
+
+
   return (
     <>
       <h1>Todo List</h1>
@@ -14,8 +25,8 @@ function App() {
           {
               tasks.map(taskObj => {
                 return <Task 
-                    taskName={taskObj.taskName} 
-                    important={taskObj.important}
+                    taskName={taskObj.todo} 
+                    important={taskObj.completed}
                     key={taskObj.id}
                     >
                   </Task>
